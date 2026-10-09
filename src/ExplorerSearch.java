@@ -7,7 +7,7 @@ public class ExplorerSearch {
      * Returns how much land area an explorer can reach on a rectangular island.
      * 
      * The island is represented by a rectangular int[][] that contains
-     * ONLY the following nunbers:
+     * ONLY the following numbers:
      * 
      * '0': represents the starting location of the explorer
      * '1': represents a field the explorer can walk through
@@ -32,6 +32,29 @@ public class ExplorerSearch {
         // Implement your method here!
         // Please also make more test cases
         // I STRONGLY RECOMMEND testing some helpers you might make too
+        if(island == null) throw new NullPointerException();
+
+        boolean[][] visited = new boolean[island.length][island[0].length];
+        
+        
+        
+        
+        
         return -1;
+    }
+
+    public static int reachableArea(int[] starting ,int[][] island, boolean[][] visited){
+        
+
+        return -1;
+    }
+
+    public static int[] findStart(int[][] island){
+        for(int r = 0; r < island.length; r++){
+            for(int c = 0; c < island[r].length; c++){
+                if(island[r][c] == 0)return new int[]{r,c};
+            }
+        }
+        throw new IllegalArgumentException();
     }
 }
