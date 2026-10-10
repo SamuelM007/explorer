@@ -43,7 +43,10 @@ public class ExplorerSearch {
         return -1;
     }
 
-    public static int reachableArea(int[] starting ,int[][] island, boolean[][] visited){
+    public static int reachableArea(int[] node ,int[][] island, boolean[][] visited){
+        if(visited[node[0]][node[1]]) return 0;
+        visited[node[0]][node[1]] = true;
+
         
 
         return -1;
