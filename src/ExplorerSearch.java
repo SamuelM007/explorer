@@ -36,10 +36,6 @@ public class ExplorerSearch {
 
         boolean[][] visited = new boolean[island.length][island[0].length];
         
-        
-        
-        
-        
         return reachableArea(findStart(island),island,visited);
     }
 
