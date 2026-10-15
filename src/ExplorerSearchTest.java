@@ -48,6 +48,33 @@ public class ExplorerSearchTest {
     }
 
     @Test
+    public void testHelperReachableArea_someUnreachable(){
+        int[][] island = {
+            {1,1,1,3,1,1},
+            {3,2,3,1,3,1},
+            {1,1,1,1,3,3},
+            {3,1,2,1,0,1},
+            {1,1,1,2,1,1},
+        };
+        boolean[][] visited = new boolean[5][6];
+
+        int actual = ExplorerSearch.reachableArea(new int[]{3,4},island,visited);
+        assertEquals(14, actual);
+
+        boolean[][] expected = {{false,false,false,false,false,false},
+                                {false,false,false,true,false,false},
+                                {true,true,true,true,false,false},
+                                {false,true,false,true,true,true},
+                                {true,true,true,false,true,true}};
+        for(int i = 0; i < 5; i++){
+
+            assertArrayEquals(expected[i],visited[i]);
+        }
+        
+    }
+
+
+    @Test
     public void testFindStartDefault(){
         int[][] island = {
             {1,1,1,3,1,1},
