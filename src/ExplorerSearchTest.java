@@ -35,6 +35,19 @@ public class ExplorerSearchTest {
     }
 
     @Test
+    public void testReachableArea_noReachable(){
+        int[][] island = {
+            {1,1,1,1,1},
+            {1,1,1,1,1},
+            {1,1,1,1,1},
+            {1,1,1,1,3},
+            {1,1,1,2,0}
+        };
+        int actual = ExplorerSearch.reachableArea(island);
+        assertEquals(1, actual);
+    }
+
+    @Test
     public void testFindStartDefault(){
         int[][] island = {
             {1,1,1,3,1,1},
